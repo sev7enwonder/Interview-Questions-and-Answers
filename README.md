@@ -77,12 +77,14 @@ This repo contains a number of interview questions that can be used when vetting
     Sweep: garbage collect unmarked objects.
     ```
 
-* What is *inversion of control*?
-  * A design in which custom-written portions of a computer program receive the flow of control from a generic, reusable library
-* What is tail recursion?
-  * A tail call is a subroutine call performed as the final action of a procedure
+ 4. What is tail recursion?
+    ```
+    A recursive function is tail recursive when recursive call is the last thing executed by the function. A tail call is a subroutine call performed as the final action of a procedure.
 
-####[[⬆]](#toc) <a name='architecture'>Architecture:</a>
+    Tail recursive functions considered better than non tail recursive functions as tail-recursion can be optimized by compiler. The idea used by compilers to optimize tail-recursive functions is simple, since the recursive call is the last statement, there is nothing left to do in the current function, so saving the current function’s stack frame is of no use.
+    ```
+
+#### [[⬆]](#toc) <a name='architecture'>Architecture:</a>
 * *Design principles*. (SOLID, DRY, KISS, YAGNI, Worse is better, convention over configuration, separation of concerns, principle of least knowledge, tourist principle, single source of truth, single version of the truth)
 * Drawbacks of not using *separation of concerns*
   * Adding new features will take an order of magnitude longer
