@@ -33,17 +33,50 @@ This repo contains a number of interview questions that can be used when vetting
   1. [Cryptography](#cryptography)
 
 #### [[⬆]](#toc) <a name='general'>General Questions:</a>
-* What is *polymorphism*? What is a *virtual function*?
-  * Having many forms. A function redefines in derived class will overwrite the function in base class
-  * 2 types of polymorphism
-    * compile time polymorphism : function loading and operator overloading
-    * runtime polymorphism : function overriding
-* What is *encapsulation*?
-  * Packing of data and functions into a single component - like a class
-* What is *inheritance*?
-  * Process by which objects of one class acquire the properties of objects of another class
-* How does *garbage collector* work?
-  * Mark and sweep: mark: traverse object graph starting from root objects, sweep: garbage collect unmarked objects
+
+ 1. Basic properties of object oriented programming?
+    ```
+    Encapsulation
+        Hide implementation by restricting access to public methods.
+        Instance variables are kept private and accessor methods are made public to achieve this.
+
+    Inheritance
+       In derived classes we can reuse the code of existing super classes.
+       Objects of one class acquire the properties of objects of another class.
+
+    Abstraction
+       Hide complexity by giving access to a function that will do everything underneath, so called does not have to bother about the internal working.
+
+    Polymorphism
+        One name many forms
+        
+        2 types — static and dynamic.
+        Static polymorphism:
+            Memory will be allocated at compile-time
+            E.g. function overloading, and operator overloading
+            Is achieved using method overloading.
+        Dynamic polymorphism:
+            Memory will be allocated at run-time
+            E.g. Virtual function
+            Is achieved using method overriding.
+    ```
+
+ 2. What is a *virtual function*?
+    ```
+    Giving new implementation of base class method into derived class and the calling of this new implemented function with derived class's object is called function overriding.
+
+    Giving new implementation of derived class method into base class and the calling of this new implemented function with base class's object is done by making base class function as virtual function.
+
+    Virtual function is used in situation, when we need to invoke derived class function using base class pointer. We must declare base class function as virtual using virtual keyword preceding its normal declaration. The base class object must be of pointer type so that we can dynamically replace the address of base class function with derived class function. This is how we can achieve "Runtime Polymorphism".
+    ```
+
+ 3. How does a *garbage collector* work?
+    ```
+    Mark and sweep.
+    Mark: traverse object graph starting from root objects.
+    Sweep: garbage collect unmarked objects.
+    ```
+
 * What is *inversion of control*?
   * A design in which custom-written portions of a computer program receive the flow of control from a generic, reusable library
 * What is tail recursion?
