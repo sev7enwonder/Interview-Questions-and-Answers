@@ -1,6 +1,6 @@
-#Full-stack Developer Interview Questions and Answers
+# Software Developer Interview Questions
 
-This repo contains a number of full-stack developer interview questions that can be used when vetting potential candidates.
+This repo contains a number of interview questions that can be used when vetting potential candidates
 
 ## <a name='toc'>Table of Contents</a>
 
@@ -32,17 +32,22 @@ This repo contains a number of full-stack developer interview questions that can
   1. [Machine learning](#machine-learning)
   1. [Cryptography](#cryptography)
 
-####[[⬆]](#toc) <a name='general'>General Questions:</a>
-* What is *polymorphism*? (Variable of type Shape could refer to an object of type Square, Circle... Ability of a function to handle objects of many types)
-* What is *encapsulation* (Packing of data and functions into a single component)
-* What is *inversion of control*? (A design in which custom-written portions of a computer program receive the flow of control from a generic, reusable library)
-* What is tail recursion? (A tail call is a subroutine call performed as the final action of a procedure)
-* What is *virtual function*?
-* What is *virtual method table*?
-* What is *dynamic binding*?(Actual method implementation invoked is determined at run time based on the class of the object, not the type of the variable or expression)
-* How does *garbage collector* work? (Mark and sweep: mark: traverse object graph starting from root objects, sweep: garbage collect unmarked objects. Optimizations: young/old generations, incremental mark and sweep)
-* What is *semantic versioning*? (http://semver.org)
-* What is *A/B testing*?
+#### [[⬆]](#toc) <a name='general'>General Questions:</a>
+* What is *polymorphism*? What is a *virtual function*?
+  * Having many forms. A function redefines in derived class will overwrite the function in base class
+  * 2 types of polymorphism
+    * compile time polymorphism : function loading and operator overloading
+    * runtime polymorphism : function overriding
+* What is *encapsulation*?
+  * Packing of data and functions into a single component - like a class
+* What is *inheritance*?
+  * Process by which objects of one class acquire the properties of objects of another class
+* How does *garbage collector* work?
+  * Mark and sweep: mark: traverse object graph starting from root objects, sweep: garbage collect unmarked objects
+* What is *inversion of control*?
+  * A design in which custom-written portions of a computer program receive the flow of control from a generic, reusable library
+* What is tail recursion?
+  * A tail call is a subroutine call performed as the final action of a procedure
 
 ####[[⬆]](#toc) <a name='architecture'>Architecture:</a>
 * *Design principles*. (SOLID, DRY, KISS, YAGNI, Worse is better, convention over configuration, separation of concerns, principle of least knowledge, tourist principle, single source of truth, single version of the truth)
